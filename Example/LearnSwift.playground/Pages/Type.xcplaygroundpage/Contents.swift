@@ -77,3 +77,16 @@ print(a ^ b)
 print(a << 1)
 print(a >> 1)
 a <<= 3
+
+// MARK: flow control
+for char in "abcdef" 
+    print(char)
+
+var i = -10
+
+repeat {
+    i += 5
+} while i > 0
+print(i)
+
+
