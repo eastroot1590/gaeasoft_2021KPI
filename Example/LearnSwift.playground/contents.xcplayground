@@ -4,5 +4,6 @@
         <page name='Type'/>
         <page name='Operator'/>
         <page name='FlowControl'/>
+        <page name='Function'/>
     </pages>
 </playground>
