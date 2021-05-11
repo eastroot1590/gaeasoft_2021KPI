@@ -6,5 +6,6 @@
         <page name='FlowControl'/>
         <page name='Function'/>
         <page name='OOP'/>
+        <page name='Subclass'/>
     </pages>
 </playground>
