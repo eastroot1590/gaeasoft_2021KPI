@@ -154,3 +154,36 @@ func doubleFunc(value: Int) -> some Equatable {
 위 예제에서 `doubleFunc(value:)`는 `Equatable` 프로토콜을 채택한 어떤 타입을 반환할 수 있게 선언되었다. `Int`는 `Equatable` 프로토콜을 채택하고 있는 타입이기 때문에 `value * 2`라는 값을 반환할 수 있다. 불투명 반환 타입을 사용하면 특정 타입을 반환하는 함수를 따로 작성하지 않고 같은 프로토콜을 사용하는 자료형은 하나의 함수로 추상화할 수 있다는 장점이 있다.
 
 불투명 반환 타입은 특히 SwiftUI에서 많이 사용되는 문법이다.
+
+## Reference Type vs Value Type
+
+두 타입의 차이는 대입하거나 함수의 파라미터로 전달할 때 드러난다. reference type은 복사할 때 메모리의 주소가 복사되어 원본을 공유하는 방식이지만 value type은 복사할 때 내용이 전부 복사된 복사본이 생성된다. 즉, class의 인스턴스를 파라미터로 받는 함수 내부에서 값을 변경하면 원래 내용도 바뀌지만, 구조체의 인스턴스를 파라미터로 받는 함수에서 아무리 값을 변경해도 원본에는 변화가 없다.
+
+```swift
+class SampleClass {
+	var name: String
+	
+	init(name: String) {
+		self.name = name
+	}
+}
+
+struct SampleStruct {
+	var name: String
+}
+
+var sampleClass = SampleClass(name: "John")
+var sampleStruct = SampleStruct(name: "John")
+
+var copyClass = sampleClass
+copyClass.name = "Tomas"
+var copyStruct = sampleStruct
+copyStruct.name = "Tomas"
+
+print(sampleClass.name)  // Tomas
+print(sampleStruct.name)  // John
+```
+
+위 예제에서 볼 수 있는 또다른 차이점은 class는 기본 생성자를 제공하지 않아서 프로퍼티를 초기화하는 생성자를 직접 작성해야 하지만 구조체는 프로퍼티를 초기화 할 수 있는 기본 생성자를 제공한다.
+
+일반적으로 구조체가 class 보다 효율적이고, 멀티 스레드 환경에서 더 안정적이기 때문에 상속이나 데이터 캡슐화가 필요한 경우가 아니라면 구조체의 사용을 권장한다. 인스턴스가 해제될 때 추가적인 작업을 할 수 있는 소멸자도 class만 제공한다.
