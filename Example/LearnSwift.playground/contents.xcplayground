@@ -8,5 +8,6 @@
         <page name='OOP'/>
         <page name='Subclass'/>
         <page name='PropertyWrapper'/>
+        <page name='Collection'/>
     </pages>
 </playground>
