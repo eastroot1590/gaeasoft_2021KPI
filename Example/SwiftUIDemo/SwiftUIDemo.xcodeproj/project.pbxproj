@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3254CB72676DBF3006ABD4E /* WifiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3254CB62676DBF2006ABD4E /* WifiImage.swift */; };
+		D3254CBA2676E352006ABD4E /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3254CB92676E352006ABD4E /* DemoData.swift */; };
 		D3CFDCD62651F7FB00E87AFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CFDCD52651F7FB00E87AFF /* AppDelegate.swift */; };
 		D3CFDCD82651F7FB00E87AFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CFDCD72651F7FB00E87AFF /* SceneDelegate.swift */; };
 		D3CFDCDA2651F7FB00E87AFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CFDCD92651F7FB00E87AFF /* ContentView.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D3254CB62676DBF2006ABD4E /* WifiImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiImage.swift; sourceTree = "<group>"; };
+		D3254CB92676E352006ABD4E /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		D3CFDCD22651F7FB00E87AFF /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3CFDCD52651F7FB00E87AFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3CFDCD72651F7FB00E87AFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3254CB52676D696006ABD4E /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				D3CFDCE926521AEC00E87AFF /* StandardTitle.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		D3254CB82676E340006ABD4E /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				D3254CB92676E352006ABD4E /* DemoData.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
 		D3CFDCC92651F7FB00E87AFF = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +78,8 @@
 		D3CFDCD42651F7FB00E87AFF /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D3254CB82676E340006ABD4E /* Observable */,
+				D3254CB52676D696006ABD4E /* Modifier */,
 				D3CFDCD52651F7FB00E87AFF /* AppDelegate.swift */,
 				D3CFDCD72651F7FB00E87AFF /* SceneDelegate.swift */,
 				D3CFDCD92651F7FB00E87AFF /* ContentView.swift */,
@@ -65,7 +87,7 @@
 				D3CFDCE02651F7FC00E87AFF /* LaunchScreen.storyboard */,
 				D3CFDCE32651F7FC00E87AFF /* Info.plist */,
 				D3CFDCDD2651F7FC00E87AFF /* Preview Content */,
-				D3CFDCE926521AEC00E87AFF /* StandardTitle.swift */,
+				D3254CB62676DBF2006ABD4E /* WifiImage.swift */,
 			);
 			path = SwiftUIDemo;
 			sourceTree = "<group>";
@@ -148,7 +170,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3254CBA2676E352006ABD4E /* DemoData.swift in Sources */,
 				D3CFDCD62651F7FB00E87AFF /* AppDelegate.swift in Sources */,
+				D3254CB72676DBF3006ABD4E /* WifiImage.swift in Sources */,
 				D3CFDCEA26521AEC00E87AFF /* StandardTitle.swift in Sources */,
 				D3CFDCD82651F7FB00E87AFF /* SceneDelegate.swift in Sources */,
 				D3CFDCDA2651F7FB00E87AFF /* ContentView.swift in Sources */,
