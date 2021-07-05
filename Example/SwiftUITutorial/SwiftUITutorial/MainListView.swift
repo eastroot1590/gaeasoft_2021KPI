@@ -9,10 +9,22 @@ import SwiftUI
 
 struct MainListView: View {
     var body: some View {
-        List {
-            Text("BasicLayout")
-            
-            Text("Observable")
+        NavigationView {
+            List {
+                NavigationLink(
+                    destination: BasicLayout(),
+                    label: {
+                        Text("Basic Layout")
+                    })
+                
+                NavigationLink(
+                    destination: ObservableView().environmentObject(TimerData()),
+                    label: {
+                        Text("Observable")
+                    })
+            }
+            .navigationBarTitle("Main List")
+            .listStyle(InsetGroupedListStyle())
         }
     }
 }

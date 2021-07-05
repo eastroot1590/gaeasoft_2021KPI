@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D33B7F7C2692D968001789A3 /* carData.json in Resources */ = {isa = PBXBuildFile; fileRef = D33B7F7B2692D968001789A3 /* carData.json */; };
+		D33B7F7F2692DA9F001789A3 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B7F7E2692DA9F001789A3 /* Car.swift */; };
+		D33B7F812692DAF5001789A3 /* CarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B7F802692DAF5001789A3 /* CarData.swift */; };
+		D33B7F832692DCD4001789A3 /* CarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B7F822692DCD4001789A3 /* CarStore.swift */; };
+		D33B7F862692DD47001789A3 /* CarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B7F852692DD47001789A3 /* CarContentView.swift */; };
+		D33B7F882692DE81001789A3 /* CarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B7F872692DE81001789A3 /* CarDetailView.swift */; };
 		D35B63D82678258900E66BBA /* SwiftUITutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B63D72678258900E66BBA /* SwiftUITutorialApp.swift */; };
 		D35B63DA2678258900E66BBA /* BasicLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B63D92678258900E66BBA /* BasicLayout.swift */; };
 		D35B63DC2678258900E66BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35B63DB2678258900E66BBA /* Assets.xcassets */; };
@@ -18,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D33B7F7B2692D968001789A3 /* carData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = carData.json; sourceTree = "<group>"; };
+		D33B7F7E2692DA9F001789A3 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		D33B7F802692DAF5001789A3 /* CarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarData.swift; sourceTree = "<group>"; };
+		D33B7F822692DCD4001789A3 /* CarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStore.swift; sourceTree = "<group>"; };
+		D33B7F852692DD47001789A3 /* CarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarContentView.swift; sourceTree = "<group>"; };
+		D33B7F872692DE81001789A3 /* CarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailView.swift; sourceTree = "<group>"; };
 		D35B63D42678258900E66BBA /* SwiftUITutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35B63D72678258900E66BBA /* SwiftUITutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITutorialApp.swift; sourceTree = "<group>"; };
 		D35B63D92678258900E66BBA /* BasicLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLayout.swift; sourceTree = "<group>"; };
@@ -41,6 +53,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D33B7F7D2692DA94001789A3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D33B7F7E2692DA9F001789A3 /* Car.swift */,
+				D33B7F802692DAF5001789A3 /* CarData.swift */,
+				D33B7F822692DCD4001789A3 /* CarStore.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D33B7F842692DD22001789A3 /* CarExample */ = {
+			isa = PBXGroup;
+			children = (
+				D33B7F852692DD47001789A3 /* CarContentView.swift */,
+				D33B7F872692DE81001789A3 /* CarDetailView.swift */,
+			);
+			path = CarExample;
+			sourceTree = "<group>";
+		};
 		D35B63CB2678258900E66BBA = {
 			isa = PBXGroup;
 			children = (
@@ -60,13 +91,16 @@
 		D35B63D62678258900E66BBA /* SwiftUITutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D33B7F7D2692DA94001789A3 /* Data */,
 				D35B63ED26782EE600E66BBA /* Observable */,
 				D35B63EC26782EDF00E66BBA /* BasicLayout */,
+				D33B7F842692DD22001789A3 /* CarExample */,
 				D35B63D72678258900E66BBA /* SwiftUITutorialApp.swift */,
 				D35B63DB2678258900E66BBA /* Assets.xcassets */,
 				D35B63E02678258900E66BBA /* Info.plist */,
 				D35B63DD2678258900E66BBA /* Preview Content */,
 				D35B63EE2678322E00E66BBA /* MainListView.swift */,
+				D33B7F7B2692D968001789A3 /* carData.json */,
 			);
 			path = SwiftUITutorial;
 			sourceTree = "<group>";
@@ -155,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35B63DF2678258900E66BBA /* Preview Assets.xcassets in Resources */,
+				D33B7F7C2692D968001789A3 /* carData.json in Resources */,
 				D35B63DC2678258900E66BBA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,12 +201,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33B7F812692DAF5001789A3 /* CarData.swift in Sources */,
 				D35B63DA2678258900E66BBA /* BasicLayout.swift in Sources */,
 				D35B63EF2678322E00E66BBA /* MainListView.swift in Sources */,
 				D35B63E926782CF900E66BBA /* TimerData.swift in Sources */,
 				D35B63E726782CEB00E66BBA /* ObservableView.swift in Sources */,
 				D35B63EB26782E5E00E66BBA /* ObservableSecondView.swift in Sources */,
+				D33B7F7F2692DA9F001789A3 /* Car.swift in Sources */,
+				D33B7F882692DE81001789A3 /* CarDetailView.swift in Sources */,
+				D33B7F832692DCD4001789A3 /* CarStore.swift in Sources */,
 				D35B63D82678258900E66BBA /* SwiftUITutorialApp.swift in Sources */,
+				D33B7F862692DD47001789A3 /* CarContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
