@@ -23,6 +23,7 @@
 		D35B63EF2678322E00E66BBA /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B63EE2678322E00E66BBA /* MainListView.swift */; };
 		D3B4B3A726AD32DA0000147F /* AddNewCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B4B3A626AD32DA0000147F /* AddNewCar.swift */; };
 		D3B4B3A926AD336A0000147F /* DataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B4B3A826AD336A0000147F /* DataInput.swift */; };
+		D3B4B3AC26AD3ABD0000147F /* TabContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B4B3AB26AD3ABD0000147F /* TabContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		D35B63EE2678322E00E66BBA /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
 		D3B4B3A626AD32DA0000147F /* AddNewCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCar.swift; sourceTree = "<group>"; };
 		D3B4B3A826AD336A0000147F /* DataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInput.swift; sourceTree = "<group>"; };
+		D3B4B3AB26AD3ABD0000147F /* TabContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,8 @@
 		D35B63D62678258900E66BBA /* SwiftUITutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D3B4B3AD26AD3CF60000147F /* ContextMenu */,
+				D3B4B3AA26AD3A9E0000147F /* TabExample */,
 				D33B7F7D2692DA94001789A3 /* Data */,
 				D35B63ED26782EE600E66BBA /* Observable */,
 				D35B63EC26782EDF00E66BBA /* BasicLayout */,
@@ -135,6 +139,21 @@
 				D35B63EA26782E5E00E66BBA /* ObservableSecondView.swift */,
 			);
 			path = Observable;
+			sourceTree = "<group>";
+		};
+		D3B4B3AA26AD3A9E0000147F /* TabExample */ = {
+			isa = PBXGroup;
+			children = (
+				D3B4B3AB26AD3ABD0000147F /* TabContentView.swift */,
+			);
+			path = TabExample;
+			sourceTree = "<group>";
+		};
+		D3B4B3AD26AD3CF60000147F /* ContextMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ContextMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +236,7 @@
 				D3B4B3A926AD336A0000147F /* DataInput.swift in Sources */,
 				D3B4B3A726AD32DA0000147F /* AddNewCar.swift in Sources */,
 				D33B7F882692DE81001789A3 /* CarDetailView.swift in Sources */,
+				D3B4B3AC26AD3ABD0000147F /* TabContentView.swift in Sources */,
 				D33B7F832692DCD4001789A3 /* CarStore.swift in Sources */,
 				D35B63D82678258900E66BBA /* SwiftUITutorialApp.swift in Sources */,
 				D33B7F862692DD47001789A3 /* CarContentView.swift in Sources */,
