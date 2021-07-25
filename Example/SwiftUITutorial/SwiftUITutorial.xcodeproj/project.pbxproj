@@ -21,6 +21,8 @@
 		D35B63E926782CF900E66BBA /* TimerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B63E826782CF900E66BBA /* TimerData.swift */; };
 		D35B63EB26782E5E00E66BBA /* ObservableSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B63EA26782E5E00E66BBA /* ObservableSecondView.swift */; };
 		D35B63EF2678322E00E66BBA /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B63EE2678322E00E66BBA /* MainListView.swift */; };
+		D3B4B3A726AD32DA0000147F /* AddNewCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B4B3A626AD32DA0000147F /* AddNewCar.swift */; };
+		D3B4B3A926AD336A0000147F /* DataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B4B3A826AD336A0000147F /* DataInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		D35B63E826782CF900E66BBA /* TimerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerData.swift; sourceTree = "<group>"; };
 		D35B63EA26782E5E00E66BBA /* ObservableSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableSecondView.swift; sourceTree = "<group>"; };
 		D35B63EE2678322E00E66BBA /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
+		D3B4B3A626AD32DA0000147F /* AddNewCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCar.swift; sourceTree = "<group>"; };
+		D3B4B3A826AD336A0000147F /* DataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 			children = (
 				D33B7F852692DD47001789A3 /* CarContentView.swift */,
 				D33B7F872692DE81001789A3 /* CarDetailView.swift */,
+				D3B4B3A626AD32DA0000147F /* AddNewCar.swift */,
+				D3B4B3A826AD336A0000147F /* DataInput.swift */,
 			);
 			path = CarExample;
 			sourceTree = "<group>";
@@ -208,6 +214,8 @@
 				D35B63E726782CEB00E66BBA /* ObservableView.swift in Sources */,
 				D35B63EB26782E5E00E66BBA /* ObservableSecondView.swift in Sources */,
 				D33B7F7F2692DA9F001789A3 /* Car.swift in Sources */,
+				D3B4B3A926AD336A0000147F /* DataInput.swift in Sources */,
+				D3B4B3A726AD32DA0000147F /* AddNewCar.swift in Sources */,
 				D33B7F882692DE81001789A3 /* CarDetailView.swift in Sources */,
 				D33B7F832692DCD4001789A3 /* CarStore.swift in Sources */,
 				D35B63D82678258900E66BBA /* SwiftUITutorialApp.swift in Sources */,
