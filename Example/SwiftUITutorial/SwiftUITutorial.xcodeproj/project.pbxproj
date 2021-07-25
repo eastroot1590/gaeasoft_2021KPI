@@ -24,6 +24,7 @@
 		D3B4B3A726AD32DA0000147F /* AddNewCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B4B3A626AD32DA0000147F /* AddNewCar.swift */; };
 		D3B4B3A926AD336A0000147F /* DataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B4B3A826AD336A0000147F /* DataInput.swift */; };
 		D3B4B3AC26AD3ABD0000147F /* TabContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B4B3AB26AD3ABD0000147F /* TabContentView.swift */; };
+		D3B4B3AF26AD3D5F0000147F /* ContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B4B3AE26AD3D5F0000147F /* ContextMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D3B4B3A626AD32DA0000147F /* AddNewCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCar.swift; sourceTree = "<group>"; };
 		D3B4B3A826AD336A0000147F /* DataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInput.swift; sourceTree = "<group>"; };
 		D3B4B3AB26AD3ABD0000147F /* TabContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContentView.swift; sourceTree = "<group>"; };
+		D3B4B3AE26AD3D5F0000147F /* ContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		D3B4B3AD26AD3CF60000147F /* ContextMenu */ = {
 			isa = PBXGroup;
 			children = (
+				D3B4B3AE26AD3D5F0000147F /* ContextMenu.swift */,
 			);
 			path = ContextMenu;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				D3B4B3A926AD336A0000147F /* DataInput.swift in Sources */,
 				D3B4B3A726AD32DA0000147F /* AddNewCar.swift in Sources */,
 				D33B7F882692DE81001789A3 /* CarDetailView.swift in Sources */,
+				D3B4B3AF26AD3D5F0000147F /* ContextMenu.swift in Sources */,
 				D3B4B3AC26AD3ABD0000147F /* TabContentView.swift in Sources */,
 				D33B7F832692DCD4001789A3 /* CarStore.swift in Sources */,
 				D35B63D82678258900E66BBA /* SwiftUITutorialApp.swift in Sources */,
