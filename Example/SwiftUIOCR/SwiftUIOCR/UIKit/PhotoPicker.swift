@@ -32,13 +32,11 @@ struct PhotoPicker: UIViewControllerRepresentable {
             let uiImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
             onImagePicked(uiImage)
             presentationMode.dismiss()
-            
         }
         
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             presentationMode.dismiss()
         }
-        
     }
     
     func makeCoordinator() -> Coordinator {
