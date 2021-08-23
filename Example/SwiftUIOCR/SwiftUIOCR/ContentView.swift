@@ -11,8 +11,12 @@ struct ContentView: View {
     let ocrTools: [OCRTool] = [.Kakao, .Google]
     
     @State var showImagePicker = false
+    @State var showResult = false
     @State var resultText: Text? = nil
     @State var ocrTool = 0
+    
+    @State var resultImage: UIImage = UIImage()
+    @State var resultInfos: [OCRResultInfo]?
     
     let ocrScanner = KakaoOCRScanner()
     
@@ -46,12 +50,20 @@ struct ContentView: View {
                         return
                     }
                     
+                    
                     ocrScanner.scan(sourceImage, completed: { result in
-                        resultText = Text(result)
+//                        resultText = Text(result)
+                        resultImage = sourceImage
+                        resultInfos = result
+                        
+                        showResult = true
                     })
                 }
                 
             }
+            .sheet(isPresented: $showResult, content: {
+                ResultView(resultImage: resultImage, resultInfos: resultInfos)
+            })
         }
         .navigationTitle(Text("OCRScanner"))
     }

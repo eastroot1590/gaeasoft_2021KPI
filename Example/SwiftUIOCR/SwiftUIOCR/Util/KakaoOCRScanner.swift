@@ -17,7 +17,7 @@ struct KakaoResponse: Decodable {
 }
 
 class KakaoOCRScanner: OCRScanner {
-    func scan(_ sourceImage: UIImage, completed: @escaping (String) -> Void) {
+    func scan(_ sourceImage: UIImage, completed: @escaping ([OCRResultInfo]?) -> Void) {
         guard let url = URL(string: "https://dapi.kakao.com/v2/vision/text/ocr"),
               let imageBinary = sourceImage.jpegData(compressionQuality: 1),
               let apiKey = Bundle.main.object(forInfoDictionaryKey: "Kakao API Key") as? String else {
@@ -51,22 +51,29 @@ class KakaoOCRScanner: OCRScanner {
             print(response.debugDescription)
             
             guard let data = data,
-                  let dataString = String(data: data, encoding: .utf8),
                   let result = try? JSONDecoder().decode(KakaoResponse.self, from: data) else {
-                completed("fail to scan")
+                completed(nil)
                 return
             }
             
-            var ocrResult: String = ""
+            var ocrResults: [OCRResultInfo] = []
             
             for block in result.result {
+                var blockWord: String = ""
+                
                 for word in block.recognition_words {
-                    ocrResult.append("\(word) ")
+                    blockWord.append("\(word) ")
                 }
+                
+                ocrResults.append(OCRResultInfo(word: blockWord,
+                                                box: OCRResultInfo.Box(lt: CGPoint(x: block.boxes[0][0], y: block.boxes[0][1]),
+                                                                       rt: CGPoint(x: block.boxes[1][0], y: block.boxes[1][1]),
+                                                                       rb: CGPoint(x: block.boxes[2][0], y: block.boxes[2][1]),
+                                                                       lb: CGPoint(x: block.boxes[3][0], y: block.boxes[3][1]))))
             }
             
             DispatchQueue.main.async {
-                completed(ocrResult)
+                completed(ocrResults)
             }
         }).resume()
     }

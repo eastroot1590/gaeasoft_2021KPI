@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D351F9CB26D3223300A6C411 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351F9CA26D3223300A6C411 /* ResultView.swift */; };
+		D351F9CD26D3271A00A6C411 /* OCRResultInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351F9CC26D3271A00A6C411 /* OCRResultInfo.swift */; };
 		D3A36FAB26AE344100183BD3 /* SwiftUIOCRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A36FAA26AE344100183BD3 /* SwiftUIOCRApp.swift */; };
 		D3A36FAD26AE344100183BD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A36FAC26AE344100183BD3 /* ContentView.swift */; };
 		D3A36FAF26AE344100183BD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A36FAE26AE344100183BD3 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D351F9CA26D3223300A6C411 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		D351F9CC26D3271A00A6C411 /* OCRResultInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultInfo.swift; sourceTree = "<group>"; };
 		D3A36FA726AE344100183BD3 /* SwiftUIOCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIOCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A36FAA26AE344100183BD3 /* SwiftUIOCRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIOCRApp.swift; sourceTree = "<group>"; };
 		D3A36FAC26AE344100183BD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 				D3A36FB926AE357F00183BD3 /* Data */,
 				D3A36FAA26AE344100183BD3 /* SwiftUIOCRApp.swift */,
 				D3A36FAC26AE344100183BD3 /* ContentView.swift */,
+				D351F9CA26D3223300A6C411 /* ResultView.swift */,
 				D3A36FAE26AE344100183BD3 /* Assets.xcassets */,
 				D3A36FB326AE344100183BD3 /* Info.plist */,
 				D3A36FB026AE344100183BD3 /* Preview Content */,
@@ -89,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				D3A36FBA26AE358B00183BD3 /* OCRTool.swift */,
+				D351F9CC26D3271A00A6C411 /* OCRResultInfo.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -190,6 +196,8 @@
 			files = (
 				D3A36FC326AE43C900183BD3 /* KakaoOCRScanner.swift in Sources */,
 				D3A36FBE26AE404400183BD3 /* PhotoPicker.swift in Sources */,
+				D351F9CD26D3271A00A6C411 /* OCRResultInfo.swift in Sources */,
+				D351F9CB26D3223300A6C411 /* ResultView.swift in Sources */,
 				D3A36FAD26AE344100183BD3 /* ContentView.swift in Sources */,
 				D3A36FC526AE43C900183BD3 /* OCRScanner.swift in Sources */,
 				D3A36FAB26AE344100183BD3 /* SwiftUIOCRApp.swift in Sources */,

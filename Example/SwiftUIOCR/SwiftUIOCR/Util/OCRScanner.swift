@@ -8,5 +8,5 @@
 import UIKit
 
 protocol OCRScanner {
-    func scan(_ sourceImage: UIImage, completed: @escaping (String) -> Void)
+    func scan(_ sourceImage: UIImage, completed: @escaping ([OCRResultInfo]?) -> Void)
 }
