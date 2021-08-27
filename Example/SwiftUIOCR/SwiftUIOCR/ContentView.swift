@@ -16,10 +16,11 @@ struct ContentView: View {
     @State var ocrTool = 0
     
     @State var resultImage: UIImage = UIImage()
-    @State var resultInfos: [OCRResultInfo] = [OCRResultInfo(word: "hello", box: OCRResultInfo.Box(lt: CGPoint(x: 10, y: 10),
-                                                                                                   rt: CGPoint(x: 110, y: 10),
-                                                                                                   rb: CGPoint(x: 110, y: 110),
-                                                                                                   lb: CGPoint(x: 10, y: 110)))]
+    @ObservedObject var resultState: OCRResultState = OCRResultState()
+//    @State var resultInfos: [OCRResultInfo] = [OCRResultInfo(word: "hello", box: OCRResultInfo.Box(lt: CGPoint(x: 10, y: 10),
+//                                                                                                   rt: CGPoint(x: 110, y: 10),
+//                                                                                                   rb: CGPoint(x: 110, y: 110),
+//                                                                                                   lb: CGPoint(x: 10, y: 110)))]
     
     let ocrScanner = KakaoOCRScanner()
     
@@ -59,7 +60,8 @@ struct ContentView: View {
                         }
                         
                         resultImage = sourceImage
-                        resultInfos = result
+//                        resultInfos = result
+                        resultState.result = result
                         DispatchQueue.main.async {
                             
                             showResult.toggle()
@@ -68,7 +70,7 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $showResult, content: {
-                ResultView(resultImage: resultImage, resultInfos: resultInfos)
+                ResultView(resultImage: resultImage, resultInfos: resultState.result)
             })
         }
         .navigationTitle(Text("OCRScanner"))

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D344AB4826D8DF2800F990E7 /* OCRResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344AB4726D8DF2800F990E7 /* OCRResultState.swift */; };
 		D351F9CB26D3223300A6C411 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351F9CA26D3223300A6C411 /* ResultView.swift */; };
 		D351F9CD26D3271A00A6C411 /* OCRResultInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351F9CC26D3271A00A6C411 /* OCRResultInfo.swift */; };
 		D3A36FAB26AE344100183BD3 /* SwiftUIOCRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A36FAA26AE344100183BD3 /* SwiftUIOCRApp.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D344AB4726D8DF2800F990E7 /* OCRResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultState.swift; sourceTree = "<group>"; };
 		D351F9CA26D3223300A6C411 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		D351F9CC26D3271A00A6C411 /* OCRResultInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultInfo.swift; sourceTree = "<group>"; };
 		D3A36FA726AE344100183BD3 /* SwiftUIOCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIOCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 			children = (
 				D3A36FBA26AE358B00183BD3 /* OCRTool.swift */,
 				D351F9CC26D3271A00A6C411 /* OCRResultInfo.swift */,
+				D344AB4726D8DF2800F990E7 /* OCRResultState.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				D3A36FC326AE43C900183BD3 /* KakaoOCRScanner.swift in Sources */,
 				D3A36FBE26AE404400183BD3 /* PhotoPicker.swift in Sources */,
 				D351F9CD26D3271A00A6C411 /* OCRResultInfo.swift in Sources */,
+				D344AB4826D8DF2800F990E7 /* OCRResultState.swift in Sources */,
 				D351F9CB26D3223300A6C411 /* ResultView.swift in Sources */,
 				D3A36FAD26AE344100183BD3 /* ContentView.swift in Sources */,
 				D3A36FC526AE43C900183BD3 /* OCRScanner.swift in Sources */,
