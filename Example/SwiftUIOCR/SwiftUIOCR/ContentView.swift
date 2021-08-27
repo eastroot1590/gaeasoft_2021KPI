@@ -16,7 +16,10 @@ struct ContentView: View {
     @State var ocrTool = 0
     
     @State var resultImage: UIImage = UIImage()
-    @State var resultInfos: [OCRResultInfo]?
+    @State var resultInfos: [OCRResultInfo] = [OCRResultInfo(word: "hello", box: OCRResultInfo.Box(lt: CGPoint(x: 10, y: 10),
+                                                                                                   rt: CGPoint(x: 110, y: 10),
+                                                                                                   rb: CGPoint(x: 110, y: 110),
+                                                                                                   lb: CGPoint(x: 10, y: 110)))]
     
     let ocrScanner = KakaoOCRScanner()
     
@@ -50,16 +53,19 @@ struct ContentView: View {
                         return
                     }
                     
-                    
                     ocrScanner.scan(sourceImage, completed: { result in
-//                        resultText = Text(result)
+                        guard let result = result else {
+                            return
+                        }
+                        
                         resultImage = sourceImage
                         resultInfos = result
-                        
-                        showResult = true
+                        DispatchQueue.main.async {
+                            
+                            showResult.toggle()
+                        }
                     })
                 }
-                
             }
             .sheet(isPresented: $showResult, content: {
                 ResultView(resultImage: resultImage, resultInfos: resultInfos)
