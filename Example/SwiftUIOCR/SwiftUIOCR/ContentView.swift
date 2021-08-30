@@ -10,19 +10,15 @@ import SwiftUI
 struct ContentView: View {
     let ocrTools: [OCRTool] = [.Kakao, .Google]
     
-    @State var showImagePicker = false
-    @State var showResult = false
-    @State var resultText: Text? = nil
-    @State var ocrTool = 0
+    let ocrScanner: [OCRScanner] = [KakaoOCRScanner(), MLVisionOCRScanner()]
     
-    @State var resultImage: UIImage = UIImage()
     @ObservedObject var resultState: OCRResultState = OCRResultState()
-//    @State var resultInfos: [OCRResultInfo] = [OCRResultInfo(word: "hello", box: OCRResultInfo.Box(lt: CGPoint(x: 10, y: 10),
-//                                                                                                   rt: CGPoint(x: 110, y: 10),
-//                                                                                                   rb: CGPoint(x: 110, y: 110),
-//                                                                                                   lb: CGPoint(x: 10, y: 110)))]
     
-    let ocrScanner = KakaoOCRScanner()
+    @State private var showImagePicker = false
+    @State private var showResult = false
+    @State private var ocrTool = 0
+    
+    @State private var resultImage: UIImage = UIImage()
     
     var body: some View {
         NavigationView {
@@ -32,8 +28,6 @@ struct ContentView: View {
                         Text(self.ocrTools[i].description())
                     }
                 })
-                
-                resultText
                 
                 Spacer()
                 
@@ -54,13 +48,12 @@ struct ContentView: View {
                         return
                     }
                     
-                    ocrScanner.scan(sourceImage, completed: { result in
+                    ocrScanner[ocrTool].scan(sourceImage, completed: { result in
                         guard let result = result else {
                             return
                         }
                         
                         resultImage = sourceImage
-//                        resultInfos = result
                         resultState.result = result
                         DispatchQueue.main.async {
                             

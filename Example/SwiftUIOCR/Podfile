@@ -1,0 +1,11 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'SwiftUIOCR' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SwiftUIOCR
+  pod 'Firebase/MLVision', '6.25.0'
+
+end

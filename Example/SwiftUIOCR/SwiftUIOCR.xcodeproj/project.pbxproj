@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D338814F26DC725300E8019F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D338814E26DC725300E8019F /* GoogleService-Info.plist */; };
 		D344AB4826D8DF2800F990E7 /* OCRResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344AB4726D8DF2800F990E7 /* OCRResultState.swift */; };
 		D351F9CB26D3223300A6C411 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351F9CA26D3223300A6C411 /* ResultView.swift */; };
 		D351F9CD26D3271A00A6C411 /* OCRResultInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351F9CC26D3271A00A6C411 /* OCRResultInfo.swift */; };
+		D3565FAA26DC6C8D0038B131 /* Pods_SwiftUIOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3565FA926DC6C8D0038B131 /* Pods_SwiftUIOCR.framework */; };
 		D3A36FAB26AE344100183BD3 /* SwiftUIOCRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A36FAA26AE344100183BD3 /* SwiftUIOCRApp.swift */; };
 		D3A36FAD26AE344100183BD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A36FAC26AE344100183BD3 /* ContentView.swift */; };
 		D3A36FAF26AE344100183BD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A36FAE26AE344100183BD3 /* Assets.xcassets */; };
@@ -23,9 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38A3A01FC177C98363FD32E4 /* Pods_SwiftUIOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73731DA52998EAA6522333AA /* Pods-SwiftUIOCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIOCR.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIOCR/Pods-SwiftUIOCR.debug.xcconfig"; sourceTree = "<group>"; };
+		A7884BFDF3297FDB4A304FB3 /* Pods-SwiftUIOCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIOCR.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIOCR/Pods-SwiftUIOCR.release.xcconfig"; sourceTree = "<group>"; };
+		D338814E26DC725300E8019F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D344AB4726D8DF2800F990E7 /* OCRResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultState.swift; sourceTree = "<group>"; };
 		D351F9CA26D3223300A6C411 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		D351F9CC26D3271A00A6C411 /* OCRResultInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultInfo.swift; sourceTree = "<group>"; };
+		D3565FA526DC6C800038B131 /* Pods_SwiftUIOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_SwiftUIOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3565FA926DC6C8D0038B131 /* Pods_SwiftUIOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_SwiftUIOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A36FA726AE344100183BD3 /* SwiftUIOCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIOCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A36FAA26AE344100183BD3 /* SwiftUIOCRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIOCRApp.swift; sourceTree = "<group>"; };
 		D3A36FAC26AE344100183BD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,17 +53,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3565FAA26DC6C8D0038B131 /* Pods_SwiftUIOCR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07FA74C32A9E7F168D5B8196 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3565FA926DC6C8D0038B131 /* Pods_SwiftUIOCR.framework */,
+				D3565FA526DC6C800038B131 /* Pods_SwiftUIOCR.framework */,
+				38A3A01FC177C98363FD32E4 /* Pods_SwiftUIOCR.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BEF335E5D2B1A8DB771BDA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73731DA52998EAA6522333AA /* Pods-SwiftUIOCR.debug.xcconfig */,
+				A7884BFDF3297FDB4A304FB3 /* Pods-SwiftUIOCR.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D3A36F9E26AE344100183BD3 = {
 			isa = PBXGroup;
 			children = (
 				D3A36FA926AE344100183BD3 /* SwiftUIOCR */,
 				D3A36FA826AE344100183BD3 /* Products */,
+				5BEF335E5D2B1A8DB771BDA4 /* Pods */,
+				07FA74C32A9E7F168D5B8196 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +109,7 @@
 				D351F9CA26D3223300A6C411 /* ResultView.swift */,
 				D3A36FAE26AE344100183BD3 /* Assets.xcassets */,
 				D3A36FB326AE344100183BD3 /* Info.plist */,
+				D338814E26DC725300E8019F /* GoogleService-Info.plist */,
 				D3A36FB026AE344100183BD3 /* Preview Content */,
 			);
 			path = SwiftUIOCR;
@@ -135,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3A36FB626AE344100183BD3 /* Build configuration list for PBXNativeTarget "SwiftUIOCR" */;
 			buildPhases = (
+				CB40947892B25E081AB749C2 /* [CP] Check Pods Manifest.lock */,
 				D3A36FA326AE344100183BD3 /* Sources */,
 				D3A36FA426AE344100183BD3 /* Frameworks */,
 				D3A36FA526AE344100183BD3 /* Resources */,
+				CA2A8A4B94D725D289DDABCC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,10 +220,53 @@
 			files = (
 				D3A36FB226AE344100183BD3 /* Preview Assets.xcassets in Resources */,
 				D3A36FAF26AE344100183BD3 /* Assets.xcassets in Resources */,
+				D338814F26DC725300E8019F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA2A8A4B94D725D289DDABCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUIOCR/Pods-SwiftUIOCR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUIOCR/Pods-SwiftUIOCR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUIOCR/Pods-SwiftUIOCR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB40947892B25E081AB749C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftUIOCR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3A36FA326AE344100183BD3 /* Sources */ = {
@@ -332,6 +408,7 @@
 		};
 		D3A36FB726AE344100183BD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73731DA52998EAA6522333AA /* Pods-SwiftUIOCR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -354,6 +431,7 @@
 		};
 		D3A36FB826AE344100183BD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7884BFDF3297FDB4A304FB3 /* Pods-SwiftUIOCR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
