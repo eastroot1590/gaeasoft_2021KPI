@@ -11,15 +11,19 @@ struct ResultView: View {
     var resultImage: UIImage
     var resultInfos: [OCRResultInfo]?
     
+//    @State private var resultString: String = ""
+    
     var body: some View {
         GeometryReader { geometry in
             let scale = 500 / resultImage.size.height
             
-            Image(uiImage: resultImage)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: geometry.size.width, height: 500)
-                .overlay(
+            VStack {
+                ZStack {
+                    Image(uiImage: resultImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width, height: 500)
+                    
                     Path { path in
                         guard let  results = resultInfos else {
                             return
@@ -36,7 +40,23 @@ struct ResultView: View {
                     }
                     .stroke(Color.blue, lineWidth: 2)
                     .frame(width: resultImage.size.width * scale, height: 500)
-                )
+                }
+                
+                let resultString: String = {
+                    guard let results = resultInfos else {
+                        return ""
+                    }
+                    
+                    var resultString = ""
+                    for result in results {
+                        resultString += "[\(result.word)] "
+                    }
+                    
+                    return resultString
+                }()
+                
+                Text(resultString)
+            }
         }
     }
 }
