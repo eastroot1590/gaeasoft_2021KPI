@@ -15,14 +15,14 @@ struct ResultView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            let scale = 500 / resultImage.size.height
+            let scale = resultImage.size.width < resultImage.size.height ? 500 / resultImage.size.height : geometry.size.width / resultImage.size.width
             
             VStack {
                 ZStack {
                     Image(uiImage: resultImage)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: geometry.size.width, height: 500)
+                        .frame(width: geometry.size.width, height: 500, alignment: .top)
                     
                     Path { path in
                         guard let  results = resultInfos else {
@@ -63,7 +63,7 @@ struct ResultView: View {
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultView(resultImage: UIImage(named: "sample2")!, resultInfos: [
+        ResultView(resultImage: UIImage(named: "sample3")!, resultInfos: [
             OCRResultInfo(word: "hello", box: OCRResultInfo.Box(lt: CGPoint(x: 10, y: 10),
                                                                 rt: CGPoint(x: 110, y: 10),
                                                                 rb: CGPoint(x: 110, y: 110),

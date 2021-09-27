@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>need access photo</string>
 	<key>Kakao API Key</key>
 	<string>d3b2600cde6dd3962333c2568c96b29b</string>
 	<key>CFBundleDevelopmentRegion</key>

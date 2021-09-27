@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ContentView: View {
     let ocrTools: [OCRTool] = [.Kakao, .Google]
@@ -43,23 +44,44 @@ struct ContentView: View {
             }
             .navigationTitle(Text("OCR Scanner"))
             .sheet(isPresented: $showImagePicker) {
-                PhotoPicker(sourceType: .photoLibrary) { image in
-                    guard let sourceImage = image.scaledImage(1024) else {
-                        return
-                    }
-                    
-                    ocrScanner[ocrTool].scan(sourceImage, completed: { result in
-                        guard let result = result else {
+                if #available(iOS 14.0, *) {
+                    PHPicker(sourceType: .photoLibrary) { image in
+                        guard let sourceImage = image.scaledImage(1024) else {
                             return
                         }
                         
-                        resultImage = sourceImage
-                        resultState.result = result
-                        DispatchQueue.main.async {
+                        ocrScanner[ocrTool].scan(sourceImage, completed: { result in
+                            guard let result = result else {
+                                return
+                            }
                             
-                            showResult.toggle()
+                            resultImage = sourceImage
+                            resultState.result = result
+                            DispatchQueue.main.async {
+                                
+                                showResult.toggle()
+                            }
+                        })
+                    }
+                } else {
+                    PhotoPicker(sourceType: .photoLibrary) { image in
+                        guard let sourceImage = image.scaledImage(1024) else {
+                            return
                         }
-                    })
+                        
+                        ocrScanner[ocrTool].scan(sourceImage, completed: { result in
+                            guard let result = result else {
+                                return
+                            }
+                            
+                            resultImage = sourceImage
+                            resultState.result = result
+                            DispatchQueue.main.async {
+                                
+                                showResult.toggle()
+                            }
+                        })
+                    }
                 }
             }
             .sheet(isPresented: $showResult, content: {
